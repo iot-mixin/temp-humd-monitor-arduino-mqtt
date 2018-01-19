@@ -1,0 +1,42 @@
+[
+  {
+    "Sourcefile": "",
+    "Include": "",
+    "Includepath": "/opt/arduino-1.8.5/hardware/arduino/avr/cores/arduino"
+  },
+  {
+    "Sourcefile": "",
+    "Include": "",
+    "Includepath": "/opt/arduino-1.8.5/hardware/arduino/avr/variants/standard"
+  },
+  {
+    "Sourcefile": "/home/pablo/Documentos/Pruebas/temp-humd-monitor-arduino-mqtt/build/sketch/Observer.cpp.cpp",
+    "Include": "Thread.h",
+    "Includepath": "/home/pablo/Arduino/libraries/ArduinoThread"
+  },
+  {
+    "Sourcefile": "/home/pablo/Documentos/Pruebas/temp-humd-monitor-arduino-mqtt/build/sketch/Observer.cpp.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "/home/pablo/Documentos/Pruebas/temp-humd-monitor-arduino-mqtt/build/sketch/ObserverSerial.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "/home/pablo/Documentos/Pruebas/temp-humd-monitor-arduino-mqtt/build/sketch/Subject.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "/home/pablo/Arduino/libraries/ArduinoThread/Thread.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "/home/pablo/Arduino/libraries/ArduinoThread/ThreadController.cpp",
+    "Include": "",
+    "Includepath": ""
+  }
+]

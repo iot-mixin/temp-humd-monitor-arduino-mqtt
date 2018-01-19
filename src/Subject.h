@@ -12,6 +12,6 @@ public:
 private:
     void _notifyObserver();
     Observer* mObserver;
-    virtual void setVal(const int val);
+    virtual void setValue(const int val);
 };
 #endif
