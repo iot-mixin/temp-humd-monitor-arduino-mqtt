@@ -3,7 +3,7 @@
 #include "Subject.h"
 #include "Thread.h"
 
-class Sensor : public Thread, public Subject
+class SensorTemp : public Thread, public Subject
 {
     private:
         int pin;

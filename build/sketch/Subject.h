@@ -7,11 +7,11 @@ public:
     Subject();
     void registerObserver(Observer*); 
     void unregisterObserver();
-    virtual double getValue() const;
+    virtual double getValue()const;
 
 private:
     void _notifyObserver();
     Observer* mObserver;
-    virtual void setValue(const int val);
+    virtual void setValue(const int val)=0;
 };
 #endif

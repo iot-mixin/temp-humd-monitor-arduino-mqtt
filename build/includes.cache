@@ -25,6 +25,11 @@
     "Includepath": ""
   },
   {
+    "Sourcefile": "/home/pablo/Documentos/Pruebas/temp-humd-monitor-arduino-mqtt/build/sketch/SensorTemp.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
     "Sourcefile": "/home/pablo/Documentos/Pruebas/temp-humd-monitor-arduino-mqtt/build/sketch/Subject.cpp",
     "Include": "",
     "Includepath": ""

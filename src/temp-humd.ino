@@ -1,5 +1,5 @@
 #include "Observer.h"
-#include "Sensor.h"
+#include "SensorTemp.h"
 #include "ThreadController.h"
 
 

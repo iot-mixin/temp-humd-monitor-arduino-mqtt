@@ -14,7 +14,7 @@ void loop();
 }
 #line 1 "/home/pablo/Documentos/Pruebas/temp-humd-monitor-arduino-mqtt/src/temp-humd.ino"
 #include "Observer.h"
-#include "Sensor.h"
+#include "SensorTemp.h"
 #include "ThreadController.h"
 
 
