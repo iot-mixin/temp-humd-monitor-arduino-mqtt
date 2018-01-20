@@ -7,9 +7,9 @@ public:
     Subject();
     void registerObserver(Observer*); 
     void unregisterObserver();
-    virtual double getValue()const;
+    virtual double getValue()const=0;
 
-private:
+protected:
     void _notifyObserver();
     Observer* mObserver;
     virtual void setValue(const int val)=0;

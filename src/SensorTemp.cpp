@@ -8,6 +8,7 @@ void SensorTemp::setPin(int _pin)
 void SensorTemp::setValue(int rawADC)
 {
     temp = (5.0 * rawADC * 100.0) / 1023.0;
+    Subject::_notifyObserver();
 }
 
 int SensorTemp::getPin()
@@ -15,12 +16,13 @@ int SensorTemp::getPin()
     return pin;
 }
 
-double SensorTemp::getValue()
+double SensorTemp::getValue() const
 {
     return temp;
 }
 
-void SensorTemp::run(){
+void SensorTemp::run()
+{
     setValue(analogRead(pin));
-        runned();
+    runned();
 }

@@ -5,16 +5,17 @@
 
 class SensorTemp : public Thread, public Subject
 {
-    private:
-        int pin;
-        double temp;
+  private:
+    int pin;
+    double temp;
+    
+    void setValue(int);
 
-        void setPin(int);
-        void setValue(int);
-    public:
-        int getPin();
-        double getValue();
-        void run();
+  public:
+    void setPin(int);
+    int getPin();
+    double getValue() const;
+    void run();
 };
 
 #endif

@@ -77,6 +77,7 @@ dkms.conf
 ### VisualStudioCode ###
 .vscode
 .history
+build/*
 
 
 # End of https://www.gitignore.io/api/c,c++,visualstudiocode
