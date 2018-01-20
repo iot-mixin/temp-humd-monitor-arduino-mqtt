@@ -7,6 +7,7 @@ ObserverSerial observer;
 ThreadController controller;
 void setup()
 {
+    analogReference(INTERNAL);
     Serial.begin(9600);
     while (!Serial)
     {

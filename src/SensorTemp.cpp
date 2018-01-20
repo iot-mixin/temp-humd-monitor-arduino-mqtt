@@ -7,7 +7,7 @@ void SensorTemp::setPin(int _pin)
 
 void SensorTemp::setValue(int rawADC)
 {
-    temp = (5.0 * rawADC * 100.0) / 1023.0;
+    temp = (1.1 * rawADC * 100.0) / 1024.0;
     Subject::_notifyObserver();
 }
 
