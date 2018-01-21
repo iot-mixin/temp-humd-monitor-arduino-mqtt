@@ -1,27 +1,27 @@
-#include "SensorTemp.h"
+#include "SensorLM35.h"
 
-void SensorTemp::setPin(int _pin)
+void SensorLM35::setPin(int _pin)
 {
     pin = _pin;
 }
 
-void SensorTemp::setValue(int rawADC)
+void SensorLM35::setValue(int rawADC)
 {
     temp = (1.1 * rawADC * 100.0) / 1024.0;
     Subject::_notifyObserver();
 }
 
-int SensorTemp::getPin()
+int SensorLM35::getPin()
 {
     return pin;
 }
 
-double SensorTemp::getValue() const
+double SensorLM35::getValue() const
 {
     return temp;
 }
 
-void SensorTemp::run()
+void SensorLM35::run()
 {
     setValue(analogRead(pin));
     runned();

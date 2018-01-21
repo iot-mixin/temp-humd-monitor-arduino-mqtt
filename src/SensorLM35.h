@@ -1,9 +1,9 @@
-#ifndef SENSOR_H
-#define SENSOR_H
+#ifndef SENSORLM35_H
+#define SENSORLM35_H
 #include "Subject.h"
 #include "Thread.h"
 
-class SensorTemp : public Thread, public Subject
+class SensorLM35 : public Thread, public Subject
 {
   private:
     int pin;

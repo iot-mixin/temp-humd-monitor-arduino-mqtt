@@ -1,8 +1,8 @@
 #include "ObserverSerial.h"
-#include "SensorTemp.h"
+#include "SensorLM35.h"
 #include "ThreadController.h"
 
-SensorTemp sensor;
+SensorLM35 sensor;
 ObserverSerial observer;
 ThreadController controller;
 void setup()
