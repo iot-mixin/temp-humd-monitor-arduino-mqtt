@@ -13,7 +13,7 @@ void setup()
     {
         ;
     }
-    observer.attachSubject(&sensor);
+    observer.attachSensor(&sensor);
     sensor.setPin(A0);
     sensor.setInterval(1000);
 
