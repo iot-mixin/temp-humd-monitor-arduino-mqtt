@@ -23,6 +23,6 @@ double SensorLM35::getValue() const
 
 void SensorLM35::run()
 {
-    setValue(double(analogRead(pin));
+    setValue(double(analogRead(pin)));
     runned();
 }

@@ -2,11 +2,15 @@
 #define OBSERVERSERIAL_H
 
 #include "Observer.h"
- 
+#include "SensorLM35.h"
+
 class ObserverSerial : public Observer
 {
-public:
-template <typename T>
-    void onReceivedDataFromSubject(const Subject<T> *) override;
+  public:
+    void attachSensor(SensorLM35 *);
+    void onReceivedDataFromSubject() override;
+
+  protected:
+    SensorLM35* _sensor;
 };
 #endif
