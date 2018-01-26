@@ -1,17 +1,18 @@
 #ifndef SUBJECT_H
 #define SUBJECT_H
 class Observer;
-
-class Subject {
-public:
+template <typename T>
+class Subject
+{
+  public:
     Subject();
-    void registerObserver(Observer*); 
+    void registerObserver(Observer *);
     void unregisterObserver();
-    virtual double getValue()const=0;
+    virtual T getValue() const = 0;
 
-protected:
+  protected:
     void _notifyObserver();
-    Observer* mObserver;
-    virtual void setValue(const int val)=0;
+    Observer *mObserver;
+    virtual void setValue(const T val) = 0;
 };
 #endif

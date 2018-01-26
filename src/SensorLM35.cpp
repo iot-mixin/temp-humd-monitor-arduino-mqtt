@@ -5,7 +5,7 @@ void SensorLM35::setPin(int _pin)
     pin = _pin;
 }
 
-void SensorLM35::setValue(int rawADC)
+void SensorLM35::setValue(double rawADC)
 {
     temp = (1.1 * rawADC * 100.0) / 1024.0;
     Subject::_notifyObserver();
@@ -23,6 +23,6 @@ double SensorLM35::getValue() const
 
 void SensorLM35::run()
 {
-    setValue(analogRead(pin));
+    setValue(double(analogRead(pin));
     runned();
 }

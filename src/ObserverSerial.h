@@ -2,10 +2,11 @@
 #define OBSERVERSERIAL_H
 
 #include "Observer.h"
-
+ 
 class ObserverSerial : public Observer
 {
 public:
-    void onReceivedDataFromSubject(const Subject*) override;
+template <typename T>
+    void onReceivedDataFromSubject(const Subject<T> *) override;
 };
 #endif

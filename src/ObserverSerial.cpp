@@ -2,6 +2,6 @@
 #include "HardwareSerial.h"
 
 
-void ObserverSerial::onReceivedDataFromSubject(const Subject *sub) {
+void ObserverSerial::onReceivedDataFromSubject(const Subject<T> *sub) {
     Serial.print("Value is "); Serial.println(sub->getValue());
 }
