@@ -9,7 +9,7 @@ class SensorLM35 : public Thread, public Subject<double>
     int pin;
     double temp;
     
-    void setValue(double) override;
+    void setValue(const double) override;
 
   public:
     void setPin(int);
