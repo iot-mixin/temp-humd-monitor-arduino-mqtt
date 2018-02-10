@@ -5,7 +5,11 @@
 template <typename E>
 class ObserverSerial : public Observer
 {
+  private:
+    SensorLM35<E> *subject;
+
   public:
-    void onReceivedDataFromSubject(const Subject*) override;
+    void onReceivedDataFromSubject() override;
+    void registerSubject(SensorLM35<E> _subject);
 };
 #endif

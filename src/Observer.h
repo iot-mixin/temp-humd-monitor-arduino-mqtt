@@ -5,6 +5,6 @@
 class Observer
 {
   public:
-    virtual void onReceivedDataFromSubject(const Subject*) = 0;
+    virtual void onReceivedDataFromSubject() = 0;
 };
 #endif
