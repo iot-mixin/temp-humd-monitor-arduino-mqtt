@@ -1,21 +1,21 @@
 #include "Subject.h"
 #include "Observer.h"
-template <typename T>
-Subject<T>::Subject()
+
+Subject::Subject()
 {
 }
-template <typename T>
-void Subject<T>::registerObserver(Observer *obs)
+
+void Subject::registerObserver(Observer *obs)
 {
     mObserver = obs; //we will only allow one observer
 }
-template <typename T>
-void Subject<T>::unregisterObserver()
+
+void Subject::unregisterObserver()
 {
     mObserver = nullptr;
 }
-template <typename T>
-void Subject<T>::_notifyObserver()
+
+void Subject::_notifyObserver()
 {
     if (mObserver != nullptr)
     {

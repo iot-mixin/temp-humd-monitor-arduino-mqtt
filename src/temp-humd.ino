@@ -2,8 +2,8 @@
 #include "SensorLM35.h"
 #include "ThreadController.h"
 
-SensorLM35 sensor;
-ObserverSerial observer;
+SensorLM35<double> sensor;
+ObserverSerial<double> observer;
 ThreadController controller;
 void setup()
 {
@@ -13,10 +13,10 @@ void setup()
     {
         ;
     }
-    observer.attachSubject(&sensor);
+    sensor.registerObserver(&observer);
     sensor.setPin(A0);
     sensor.setInterval(1000);
-
+    observer.registerSubject(&sensor);
     controller.add(&sensor);
 }
 
