@@ -1,6 +1,6 @@
 #ifndef SUBJECT_H
 #define SUBJECT_H
-class Observer;
+#include "Observer.h"
 
 class Subject
 {

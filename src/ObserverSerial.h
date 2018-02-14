@@ -1,15 +1,15 @@
 #ifndef OBSERVERSERIAL_H
 #define OBSERVERSERIAL_H
-
 #include "Observer.h"
-template <typename E>
+#include "SensorLM35.h"
 class ObserverSerial : public Observer
 {
-  private:
-    SensorLM35<E> *subject;
+private:
+  SensorLM35 *sensor;
 
-  public:
-    void onReceivedDataFromSubject() override;
-    void registerSubject(SensorLM35<E> _subject);
+public:
+  ObserverSerial();
+  void onReceivedDataFromSubject() override;
+  void attachSubject(SensorLM35 *);
 };
 #endif

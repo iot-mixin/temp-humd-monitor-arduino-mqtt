@@ -19,6 +19,6 @@ void Subject::_notifyObserver()
 {
     if (mObserver != nullptr)
     {
-        mObserver->onReceivedDataFromSubject(this);
+        mObserver->onReceivedDataFromSubject();
     }
 }
