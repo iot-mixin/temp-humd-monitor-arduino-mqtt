@@ -1,8 +1,18 @@
 #include "SensorLM35.h"
+#include "Subject.h"
 
-void SensorLM35::setPin(int _pin)
+SensorLM35::SensorLM35():Subject()
+{
+}
+
+void SensorLM35::setPin(const int _pin)
 {
     pin = _pin;
+}
+
+int SensorLM35::getPin()
+{
+    return pin;
 }
 
 void SensorLM35::setValue(const double rawADC)
@@ -11,15 +21,11 @@ void SensorLM35::setValue(const double rawADC)
     Subject::_notifyObserver();
 }
 
-int SensorLM35::getPin()
-{
-    return pin;
-}
-
-double SensorLM35::getValue() const
+double SensorLM35::getValue()
 {
     return temp;
 }
+
 
 void SensorLM35::run()
 {

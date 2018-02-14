@@ -3,18 +3,20 @@
 #include "Subject.h"
 #include "Thread.h"
 
-class SensorLM35 : public Thread, public Subject<double>
+class SensorLM35 : public Subject, public Thread
 {
   private:
     int pin;
-    double temp;
+    double temp=0.0;
     
-    void setValue(const double) override;
+    
 
   public:
-    void setPin(int);
+    SensorLM35();
+    void setPin(const int);
     int getPin();
-    double getValue() const override;
+    void setValue(const double);
+    double getValue();
     void run();
 };
 

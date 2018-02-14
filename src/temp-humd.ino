@@ -2,9 +2,10 @@
 #include "SensorLM35.h"
 #include "ThreadController.h"
 
-SensorLM35 sensor;
-ObserverSerial observer;
+ObserverSerial* observer = new ObserverSerial();
+SensorLM35* sensor = new SensorLM35();
 ThreadController controller;
+
 void setup()
 {
     analogReference(INTERNAL);
@@ -13,11 +14,11 @@ void setup()
     {
         ;
     }
-    observer.attachSubject(&sensor);
-    sensor.setPin(A0);
-    sensor.setInterval(1000);
+    observer->attachSubject(sensor);
+    sensor->setPin(A0);
+    sensor->setInterval(1000);
 
-    controller.add(&sensor);
+    controller.add(sensor);
 }
 
 void loop()
