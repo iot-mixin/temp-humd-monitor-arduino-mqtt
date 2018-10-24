@@ -1,6 +1,16 @@
-#include "ObserverTester.h"
+#include "ObserverSerial.h"
+#include "SensorLM35.h"
 #include "HardwareSerial.h"
 
-void ObserverTester::onReceivedDataFromSubject(const Subject *sub) {
-    Serial.print("Value is "); Serial.println(sub->getValue());
+ObserverSerial::ObserverSerial(){
+    
+}
+
+void ObserverSerial::onReceivedDataFromSubject() {
+    Serial.print("Value is "); Serial.println(sensor->getValue());
+}
+
+void ObserverSerial::attachSubject(SensorLM35 * _sensor){
+    sensor = _sensor;
+    sensor->registerObserver(this);
 }
